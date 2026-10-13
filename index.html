@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mental Health Signal</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="brain">🧠</div>
+      <div>
+        <h1>Mental Health <span>Signal</span> 🌿</h1>
+        <p>Understand your habits. Reflect on your well-being.</p>
+      </div>
+    </div>
+
+    <nav class="badges">
+      <span>💜 Self Awareness</span>
+      <span>🌿 Healthier Habits</span>
+      <span>📊 A Better You</span>
+    </nav>
+
+    <div class="handwriting">Small Steps,<br>Brighter Days ✿</div>
+  </header>
+
+  <main class="layout">
+
+    <!-- LEFT: FORM -->
+    <section class="form-panel">
+      <form id="predictionForm">
+
+        <!-- PROFILE -->
+        <div class="section-heading">
+          <span class="number">1</span>
+          <div>
+            <h2>Profile</h2>
+            <p>Tell us a bit about yourself</p>
+          </div>
+          <span class="section-icon">👤</span>
+        </div>
+
+        <div class="fields three">
+          <label>
+            Age
+            <input type="number" name="Age"
+                   min="10" max="100" value="20" required>
+          </label>
+
+          <label>
+            Gender
+            <select name="Gender" required>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+            </select>
+          </label>
+
+          <label>
+            Country
+            <input type="text" name="Country"
+                   value="India" placeholder="e.g. India" required>
+          </label>
+        </div>
+
+        <!-- ACADEMIC AND DIGITAL HABITS -->
+        <div class="section-heading second">
+          <span class="number">2</span>
+          <div>
+            <h2>Academic &amp; Digital Habits</h2>
+            <p>Your study and social media usage</p>
+          </div>
+          <span class="section-icon">💻</span>
+        </div>
+
+        <div class="fields three">
+          <label>
+            Academic level
+            <select name="Academic_Level" required>
+              <option value="Undergraduate">Undergraduate</option>
+              <option value="Graduate">Graduate</option>
+              <option value="High School">High School</option>
+            </select>
+          </label>
+
+          <label>
+            Most-used platform
+            <select name="Most_Used_Platform" required>
+              <option value="Instagram">Instagram</option>
+              <option value="YouTube">YouTube</option>
+              <option value="Facebook">Facebook</option>
+              <option value="LinkedIn">LinkedIn</option>
+              <option value="Snapchat">Snapchat</option>
+              <option value="Twitter">Twitter</option>
+              <option value="TikTok">TikTok</option>
+              <option value="LINE">LINE</option>
+              <option value="KakaoTalk">KakaoTalk</option>
+              <option value="VKontakte">VKontakte</option>
+              <option value="WhatsApp">WhatsApp</option>
+              <option value="WeChat">WeChat</option>
+            </select>
+          </label>
+
+          <label>
+            Primary purpose
+            <select name="Purpose_Of_Use" required>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Education">Education</option>
+              <option value="Networking">Networking</option>
+              <option value="News">News</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="fields two">
+          <label>
+            📱 Average daily screen time (hours)
+            <input type="number"
+                   name="Avg_Daily_Usage_Hours"
+                   min="0" max="24" step="0.1"
+                   value="4" required>
+          </label>
+
+          <label>
+            🔒 Daily phone unlocks
+            <input type="number"
+                   name="Daily_Unlocks"
+                   min="0" step="1"
+                   value="60" required>
+          </label>
+        </div>
+
+        <!-- LIFESTYLE -->
+        <div class="section-heading second">
+          <span class="number">3</span>
+          <div>
+            <h2>Lifestyle &amp; Stress</h2>
+            <p>Your daily routine and well-being</p>
+          </div>
+          <span class="section-icon">💜</span>
+        </div>
+
+        <div class="fields three">
+          <label>
+            📖 Study hours / day
+            <input type="number"
+                   name="Study_Hours"
+                   min="0" max="24" step="0.1"
+                   value="5" required>
+          </label>
+
+          <label>
+            🏃 Physical activity (hours)
+            <input type="number"
+                   name="Physical_Activity_Hours"
+                   min="0" max="24" step="0.1"
+                   value="1" required>
+          </label>
+
+          <label>
+            🌙 Sleep / night (hours)
+            <input type="number"
+                   name="Sleep_Hours_Per_Night"
+                   min="0" max="24" step="0.1"
+                   value="7" required>
+          </label>
+        </div>
+
+        <fieldset class="stress-field">
+          <legend>Perceived stress level</legend>
+
+          <div class="stress-options">
+            <label>
+              <input type="radio" name="Stress_Level" value="Low">
+              <span>Low</span>
+            </label>
+
+            <label>
+              <input type="radio" name="Stress_Level" value="Medium" checked>
+              <span>Medium</span>
+            </label>
+
+            <label>
+              <input type="radio" name="Stress_Level" value="High">
+              <span>High</span>
+            </label>
+
+            <label>
+              <input type="radio" name="Stress_Level" value="Very High">
+              <span>Very High</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="predict-button" id="predictBtn">
+          <span id="buttonText">✦ Read my signal</span>
+          <span class="arrow">→</span>
+        </button>
+
+        <p class="status" id="statusMessage" role="status" aria-live="polite">
+          Fill in your details to get your model prediction.
+        </p>
+
+      </form>
+    </section>
+
+    <!-- RIGHT: DASHBOARD -->
+    <aside class="dashboard">
+
+      <div class="result-top">
+        <div class="result-label">✨ &nbsp; YOUR RESULT</div>
+        <div class="date-label">
+          ▣ &nbsp; <span id="resultDate">Awaiting result</span>
+        </div>
+      </div>
+
+      <!-- SCORE GAUGE -->
+      <div class="gauge-area">
+
+        <div class="gauge">
+          <svg viewBox="0 0 320 200"
+               role="img" aria-label="Mental health model score gauge">
+
+            <defs>
+              <linearGradient id="gaugeGradient"
+                              x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#ff668c"/>
+                <stop offset="48%" stop-color="#ffd166"/>
+                <stop offset="100%" stop-color="#52e0a2"/>
+              </linearGradient>
+            </defs>
+
+            <path class="gauge-track"
+                  d="M 35 165 A 125 125 0 0 1 285 165"/>
+
+            <path class="gauge-color"
+                  d="M 35 165 A 125 125 0 0 1 285 165"/>
+
+            <g id="gaugeNeedle">
+              <line x1="160" y1="165" x2="160" y2="66"
+                    stroke="#f5fff9" stroke-width="4"
+                    stroke-linecap="round"/>
+              <circle cx="160" cy="165" r="8" fill="#e7fff3"/>
+              <circle cx="160" cy="165" r="4" fill="#52e0a2"/>
+            </g>
+          </svg>
+
+          <div class="gauge-center">
+            <span class="sprout">🌱</span>
+            <strong id="scoreValue">--</strong>
+            <span id="scoreScale">Out of 10</span>
+          </div>
+
+          <div class="gauge-labels">
+            <span id="gaugeMin">0</span>
+            <span id="gaugeMax">10</span>
+          </div>
+        </div>
+
+        <div class="positive-bubble" id="resultBubble">
+          <span class="bubble-icon">☀️</span>
+          <strong id="resultLabel">Your signal</strong>
+          <p id="resultHelp">
+            Submit the form to view your model's prediction.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- MEANING CARD -->
+      <div class="meaning-card">
+        <div class="meaning-title">💡 &nbsp; What this means?</div>
+        <p id="readingText">
+          Your predicted score will appear here after the model returns a result.
+
+          This is an estimate, not a medical diagnosis.
+        </p>
+        <div class="plant">🪴</div>
+      </div>
+
+      <!-- QUICK INSIGHTS -->
+      <h3 class="quick-title">▥ &nbsp; Quick Insights</h3>
+
+      <div class="insights">
+        <div class="insight-card">
+          <span>🍃</span>
+          <strong>Screen Time</strong>
+          <p id="screenInsight">Awaiting input</p>
+        </div>
+
+        <div class="insight-card purple">
+          <span>🌙</span>
+          <strong>Sleep</strong>
+          <p id="sleepInsight">Awaiting input</p>
+        </div>
+
+        <div class="insight-card mint">
+          <span>🏃</span>
+          <strong>Physical Activity</strong>
+          <p id="activityInsight">Awaiting input</p>
+        </div>
+      </div>
+
+      <!-- REMINDER -->
+      <div class="reminder-card">
+        <div class="reminder-title">💗 &nbsp; A Friendly Reminder</div>
+        <p>
+          This project provides an estimated model output, not a medical
+          diagnosis. Your well-being matters. Consider reaching out to a
+          qualified professional if you need support.
+        </p>
+        <span class="flower">🌼</span>
+      </div>
+
+    </aside>
+  </main>
+
+  <footer>
+    Made with care ♡ &nbsp; Your habits are signals, not labels.
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
