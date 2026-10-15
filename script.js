@@ -21,7 +21,7 @@ const buttonText = document.getElementById("buttonText");
 // IMPORTANT:
 // Local testing ke liye local URL use karo.
 // Render par deploy karne ke baad ise apne actual backend URL se replace karo.
-const API_URL = "http://127.0.0.1:8000/predict";
+const API_URL = "https://mental-health-score-prediction-3xq7.onrender.com";
 
 
 // Update gauge from 0 to 10
